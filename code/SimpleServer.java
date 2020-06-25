@@ -38,7 +38,7 @@ public class SimpleServer {
            out.flush(); // interrompemos o fluxo de dados
          }
 
-        byte[] bytes = new byte[6*1024]; // 32K
+        byte[] bytes = new byte[6*1024]; // 6K
         while (true) {
             sout.write(bytes);
         }
