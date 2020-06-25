@@ -17,7 +17,7 @@ Aqui vamos conter o fluxo de entrada e saide de dados. O fluxo de entrada vai no
 InputStream sin = socket.getInputStream();
 OutputStream sout = socket.getOutputStream();
 ```
-O codigo a seguir convertem estes dois de fluxos noutro tipo para que possamos usar os objetos String com mais facilidade: 
+O codigo a seguir convertem estes dois de fluxos noutros tipos para que possamos usar os objetos String com mais facilidade: 
 ```
 DataInputStream in = new DataInputStream(sin);
 DataOutputStream out = new DataOutputStream(sout);
