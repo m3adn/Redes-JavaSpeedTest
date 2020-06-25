@@ -1,2 +1,2 @@
 # Projeto Redes[JAVA]
- Projeto realizado em JAVA utilizando em sockets 
+ Projeto realizado em JAVA utilizando sockets 
