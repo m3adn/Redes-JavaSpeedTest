@@ -1,4 +1,5 @@
 Aqui vais encontrar o codigo descrito no inicio do projeto.
+![Sockets](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 ______________________________________________________________________________________
 ## O que é um socket?
 
