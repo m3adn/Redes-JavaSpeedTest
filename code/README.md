@@ -33,5 +33,5 @@ Socket socket = ss.accept();
 A classe ServerSocket difere um pouco da classe Socket. A classe  Socket , por mais simples que se possa entender ,representa em si o socket. A grande diferença entre o ServerSocket e o Socket, é que o "Server Socket" é obrigado a aguardar para que algum cliente se ligue ao mesmo. Quando é criada a classe ServerSocket é preciso indicar uma porta de ligação através da qual será realizada a tal negociação de dados. Após isso é necessário invocar o método accept(). Este método obriga o servidor a aguardar a ligação através da porta indicada anteriormente ou seja o servidor tem conhecimento que alguém há de fazer o pedido de ligação através dessa porta e o algoritmo fica a aguardar qualquer pedido de ligação para o seu endereço. Caso a ligação seja efetuada com successo é criado o tal objeto Socket habitual ,que é usado de seguida em todas as operações em que são envolvidos os sockets. De remarcar que este Socket representa o outro lado da ligação e não o lado do Servidor sendo necessário na classe ServerSocket para receber os dados do lado do cliente.
 
 _______________________________________________________________________________________
-## FUNCIONAMENTO
+## FUNCIONAMENTOs
 [![Watch the video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=rYiX_2ziDJ0&feature=youtu.be)
