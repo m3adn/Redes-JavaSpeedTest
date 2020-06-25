@@ -57,12 +57,5 @@ public class SimpleClient {
             x.printStackTrace();
         }
     }
-
-    SimpleClient(String one) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    SimpleClient() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
+    
