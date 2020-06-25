@@ -47,7 +47,7 @@ public class SimpleClient {
                 out.flush(); // Enviamos os dados guardados no buffer para o servidor
                 line = in.readUTF(); }
        
-        byte[] bytes = new byte[6*1024]; // 32K
+        byte[] bytes = new byte[6*1024]; // 6K
         for(int i=1;;i++) {
             int read = sin.read(bytes);
             if (read < 0) break;
