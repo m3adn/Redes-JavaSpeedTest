@@ -32,7 +32,7 @@ public class SimpleServer {
           
          String line = null;
          if (true){
-           line = in.readUTF(); // aguardamos uma linha de texto
+           line = in.readUTF(); // aguardamos para que o cliente nos envie algo.
            System.out.println("O cliente enviou-me isso : " + line);
            System.out.println("Vamos proceder ao teste...");
            out.flush(); // interrompemos o fluxo de dados
