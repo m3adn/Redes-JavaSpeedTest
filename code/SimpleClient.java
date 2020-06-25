@@ -43,8 +43,8 @@ public class SimpleClient {
             if (true) {
                 line = keyboard.readLine(); // Ficamos a espera para que o cliente introduza uma frase
                 System.out.println("Enviando para o servidor....");
-                out.writeUTF(line); // Enviamos a frase anterior para o servidor
-                out.flush(); // Acabamos com o fluxo de dados.
+                out.writeUTF(line); // Escrevemos para o buffer
+                out.flush(); // Enviamos os dados guardados no buffer para o servidor
                 line = in.readUTF(); }
        
         byte[] bytes = new byte[6*1024]; // 32K
