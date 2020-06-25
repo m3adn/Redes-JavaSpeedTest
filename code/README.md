@@ -11,7 +11,8 @@ ________________________________________________________________________________
 
 __________________________________________________________________________________________
 ## SIMPLE SERVER
-`ServerSocket ss = new ServerSocket(port);
-bash 
-Socket socket = ss.accept();`
+```
+ServerSocket ss = new ServerSocket(port);
+Socket socket = ss.accept();
+```
 
