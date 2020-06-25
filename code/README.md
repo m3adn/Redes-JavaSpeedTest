@@ -1,5 +1,5 @@
 Aqui vais encontrar o codigo descrito no inicio do projeto.
-![Sockets](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Sockets](https://github.com/m3adn/Projeto-Redes-JAVA/blob/master/code/img/socket-transport-application.png)
 ______________________________________________________________________________________
 ## O que é um socket?
 
