@@ -1,2 +1,2 @@
-# Projeto Redes[Network Speedtest]
-Projeto cuja tarefa é medir a velocidade de envio de pacotes com vário tamanho. Vá a divisão **code** para saber mais. Good Luck!
+# Projeto Redes[Network Speedtest - JAVA]
+Projeto cuja tarefa é medir a velocidade de envio de pacotes entre duas extremidades usando sockets em JAVA. Vá a divisão **code** para saber mais. Good Luck!
