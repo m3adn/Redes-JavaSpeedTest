@@ -18,10 +18,14 @@ import java.net.Socket;
 public class SimpleClient {
     public static void main(String[] args) {
         try { 
+        String ipadd = "127.0.0.1";
+        int port = 6666;
         long total = 0;
         long start = System.currentTimeMillis();
 
-        Socket socket = new Socket("127.0.0.1", 6666);
+            Socket socket = new Socket("ipadd", port);
+            
+            // Fluxo de saida e de entrado do socket. Agora já podemos receber e enviar dados :) ....
             InputStream sin = socket.getInputStream();
             OutputStream sout = socket.getOutputStream();
 
@@ -29,7 +33,9 @@ public class SimpleClient {
             DataInputStream in = new DataInputStream(sin);
             DataOutputStream out = new DataOutputStream(sout);
             
+            //Criamos um fluxo para que possamos receber dados do teclado
             BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
+            
             String line = null;
             
             System.out.println("Introduza algo para que o teste possa começar. Não se esqueça do ENTER ;) ");
@@ -37,7 +43,7 @@ public class SimpleClient {
             
             if (true) {
                 line = keyboard.readLine(); // Ficamos a espera para que o cliente introduza uma frase
-                System.out.println("Enviando para o servidor ----------------->");
+                System.out.println("Enviando para o servidor....");
                 out.writeUTF(line); // Enviamos a frase anterior para o servidor
                 out.flush(); // Acabamos com o fluxo de dados.
                 line = in.readUTF(); }
