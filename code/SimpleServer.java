@@ -35,7 +35,7 @@ public class SimpleServer {
            line = in.readUTF(); // aguardamos para que o cliente nos envie algo.
            System.out.println("O cliente enviou-me isso : " + line);
            System.out.println("Vamos proceder ao teste...");
-           out.flush(); // interrompemos o fluxo de dados
+           out.flush(); // enviamos os dados guardados no buffer para o cliente 
          }
 
         byte[] bytes = new byte[6*1024]; // 6K
