@@ -8,16 +8,21 @@ Socket preve a comunicação entre duas pontas (fonte e destino), entre dois pro
 
 _________________________________________________________________________________________
 ## SIMPLE CLIENT 
-
+Isto é o objeto socket criado do lado do cliente. Aqui especifica-se o endereço IP a ligar juntamente com a porta associada:
 ```
 Socket socket = new Socket(ipAddress, serverPort);
 ```
-Isto é o objeto socket criado do lado do cliente. Aqui especifica-se o endereço IP a ligar juntamente com a porta associada.
+Aqui vamos conter o fluxo de entrada e saide de dados. O fluxo de entrada vai nos permitir ler o socket , e o de saída escrever no mesmo:
 ```
 InputStream sin = socket.getInputStream();
-	OutputStream sout = socket.getOutputStream();
+OutputStream sout = socket.getOutputStream();
 ```
-  
+O codigo a seguir convertem estes dois de fluxos noutro tipo para que possamos usar os objetos String com mais facilidade: 
+```
+DataInputStream in = new DataInputStream(sin);
+DataOutputStream out = new DataOutputStream(sout);
+ ```
+ 
 __________________________________________________________________________________________
 ## SIMPLE SERVER
 Comecemos com:
@@ -27,4 +32,3 @@ Socket socket = ss.accept();
 ```
 A classe ServerSocket difere um pouco do Socket. A classe o Socket , representa em si o socket. A grande diferença entre as duas é que o "Server Socket" é obrigado a aguardar a conexão dos clientes. Quando é criada é preciso indicar uma porta de ligação através da qual será realizada a transferencia de dados, e também é necessário invocar o método accept(). Este método obriga o servidor a aguardar a ligação através da porta indicada anteriormente. O programa fica a espera até que o cliente realize a ligação. Após ligação ser efetuada com successo é criado um objeto Socket habitual que é usado de seguida em todas as operações que necessitam de sockets. De remarcar que este Socket representa o outro lado da ligação. 
 
-De seguida temos:
