@@ -34,4 +34,4 @@ A classe ServerSocket difere um pouco da classe Socket. A classe  Socket , por m
 
 _______________________________________________________________________________________
 ## FUNCIONAMENTOs
-[![Watch the video](https://github.com/m3adn/Redes-JavaSpeedTest/blob/master/code/img/internet.png )](https://www.youtube.com/watch?v=rYiX_2ziDJ0&feature=youtu.be)
+[![Veja o video!]()](https://www.youtube.com/watch?v=rYiX_2ziDJ0&feature=youtu.be)
