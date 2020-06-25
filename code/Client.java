@@ -12,12 +12,12 @@ import java.net.Socket;
 public class Client {
         public static void main(String[] args) {
             String ipadd = "127.0.0.1";
-            int port = 6666;
+            int port = 6000;
             long total = 0;
             try { 
                 Socket socket = new Socket(ipadd, port);
 
-                // Fluxo de saida e de entrado do socket. Agora jÃ¡ podemos receber e enviar dados :) ....
+                // Fluxo de saida e de entrado do socket. Agora ja podemos receber e enviar dados :) ....
                 InputStream sin = socket.getInputStream();
                 OutputStream sout = socket.getOutputStream();
 
@@ -29,7 +29,7 @@ public class Client {
                 BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
 
-                System.out.println("Introduza algo para que o teste possa comeÃ§ar. NÃ£o se esqueÃ§a do ENTER ;)\n");
+                System.out.println("Introduza algo para que o teste possa comecar. Nao se esqueca do ENTER ;)\n");
 
                 String line = keyboard.readLine();// Ficamos a espera para que o cliente introduza uma frase
 
