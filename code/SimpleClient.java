@@ -17,12 +17,11 @@ import java.net.Socket;
  */
 public class SimpleClient {
     public static void main(String[] args) {
-        try { 
-        String ipadd = "127.0.0.1";
+         String ipadd = "127.0.0.1";
         int port = 6666;
         long total = 0;
         long start = System.currentTimeMillis();
-
+        try { 
             Socket socket = new Socket("ipadd", port);
             
             // Fluxo de saida e de entrado do socket. Agora já podemos receber e enviar dados :) ....
