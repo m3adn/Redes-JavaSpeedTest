@@ -10,13 +10,12 @@ import java.net.Socket;
 
 public class Server {
     public static void main(String[] args){
-        int port = 6000;
-        try { ServerSocket server = new ServerSocket(port);// criamos o socket do servidor e associamos-no com a porta especificada
+        try { ServerSocket server = new ServerSocket(6666);// criamos o socket do servidor e associamos-no com a porta especificada
                System.out.println("Esperemos pelo cliente....");
                Socket socket = server.accept();
                System.out.println("Encontramos um :) ... Finalmente!\n");
                
-         // Pegamos no fluxo de saida e de entrado do socket. Agora ja podemos receber e enviar dados :) ....
+         // Pegamos no fluxo de saida e de entrado do socket. Agora jÃ¡ podemos receber e enviar dados :) ....
          InputStream sin = socket.getInputStream();
          OutputStream sout = socket.getOutputStream();
 
@@ -37,10 +36,11 @@ public class Server {
                 i++;
                 if(i == 5000000){
                     socket.close();
+                    System.out.println("Operação terminada!!\n");
                 }
             }
          }else{
-             System.out.println("Comando não dispoível!!\n");
+             System.out.println("Comando não disponível!!\n");
          }
         } catch(IOException x) { 
             x.printStackTrace(); 

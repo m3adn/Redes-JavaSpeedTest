@@ -11,13 +11,11 @@ import java.net.Socket;
 
 public class Client {
         public static void main(String[] args) {
-            String ipadd = "127.0.0.1";
-            int port = 6000;
             long total = 0;
             try { 
-                Socket socket = new Socket(ipadd, port);
+                Socket socket = new Socket("127.0.0.1", 6666);
 
-                // Fluxo de saida e de entrado do socket. Agora ja podemos receber e enviar dados :) ....
+                // Fluxo de saida e de entrado do socket. Agora jÃ¡ podemos receber e enviar dados :) ....
                 InputStream sin = socket.getInputStream();
                 OutputStream sout = socket.getOutputStream();
 
@@ -29,15 +27,15 @@ public class Client {
                 BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
 
-                System.out.println("Introduza algo para que o teste possa comecar. Nao se esqueca do ENTER ;)\n");
+                System.out.println("Introduza o comando. Não se esqueça do ENTER ;)\n");
 
                 String line = keyboard.readLine();// Ficamos a espera para que o cliente introduza uma frase
 
                 if (line.equals("GETSPEED")) {
+                    System.out.println("200 OK\n");
                     System.out.println("Enviando para o servidor....");
                     out.writeUTF(line);
                     out.flush(); // Enviamos a frase anterior para o servidor
-                    line = in.readUTF();
                     long start = System.currentTimeMillis();
 
                     byte[] bytes = new byte[6*1024]; // 6K
@@ -52,13 +50,13 @@ public class Client {
                             }
                         }
                     }
+                    System.out.println("Teste finalizado!!");
                 }else {
-                    System.out.println("400 Comando não encontrado");
+                    System.out.println("404 Comando não encontrado");
                     out.writeUTF(line);
                     out.flush();
                 }
                 socket.close();
-                System.out.println("Teste finalizado!!");
             }
             catch (IOException x) {
                 x.printStackTrace();
