@@ -15,7 +15,7 @@ public class Server {
                Socket socket = server.accept();
                System.out.println("Encontramos um :) ... Finalmente!\n");
                
-         // Pegamos no fluxo de saida e de entrado do socket. Agora jÃ¡ podemos receber e enviar dados :) ....
+         // Pegamos no fluxo de saida e de entrado do socket. Agora já podemos receber e enviar dados :) ....
          InputStream sin = socket.getInputStream();
          OutputStream sout = socket.getOutputStream();
 
@@ -29,7 +29,7 @@ public class Server {
          if (line.equals("GETSPEED")){
             System.out.println("Vamos proceder ao teste...");
             out.flush(); // interrompemos o fluxo de dados
-            byte[] bytes = new byte[6*1024]; // 6K
+            byte[] bytes = new byte[10*1024]; // 10K
             int i = 0;
             while (i < 5000000) {
                 sout.write(bytes);
