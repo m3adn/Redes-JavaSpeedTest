@@ -34,7 +34,7 @@ A classe ServerSocket difere um pouco da classe Socket. A classe  Socket , por m
 
 _______________________________________________________________________________________
 ## FUNCIONAMENTOs
-[![Veja o video!]](https://www.youtube.com/watch?v=fNJdbBXTJdA&feature=youtu.be)
+[![Veja o video!]](https://youtu.be/La2eyjqX4Gg)
 _______________________________________________________________________________________
 
 Projeto realizado por: **FILIPE SANTOS - 66539** e **DANIEL ANDRONIC - 67723**
