@@ -29,13 +29,14 @@ public class Server {
          if (line.equals("GETSPEED")){
             System.out.println("Vamos proceder ao teste...");
             out.flush(); // interrompemos o fluxo de dados
-            byte[] bytes = new byte[100*1024]; // 10K
+            byte[] bytes = new byte[100*1024]; // 100K
             int i = 0;
             long start = System.currentTimeMillis();
             while (i < 5000000) {
                 sout.write(bytes);
                 i++;
                 long cost = (System.currentTimeMillis() - start);
+                //30 segundos
                 if(cost >= 30000){
                     socket.close();
                     System.out.println("Operação terminada!!\n");

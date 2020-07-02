@@ -35,20 +35,20 @@ public class Client {
                     out.flush(); // Enviamos a frase anterior para o servidor
                     long start = System.currentTimeMillis();
 
-                    byte[] bytes = new byte[100*1024]; //10K
+                    byte[] bytes = new byte[100*1024]; //100K
                     for(int i=1;true ;i++) {
                         if(socket.isConnected()){
                             int read = sin.read(bytes);
                             if (read < 0) break;
                             total += read;
-                            if (i % 250000 == 0) {
+                            if (i % 100000 == 0) {
                                 long cost = System.currentTimeMillis() - start;
-                                System.out.printf("velocidade: %,d B/s%n", (8*total)/(cost/1000));
+                                System.out.printf("Velocidade: %,d B/s%n", (8*total)/(cost/1000));
                             }
                         }
                     }
                     long cost = System.currentTimeMillis() - start;
-                    System.out.printf("velocidade: %,d B/s%n", (8*total)/(cost/1000));
+                    System.out.printf("Velocidade: %,d B/s%n", (8*total)/(cost/1000));
                     System.out.println("Teste finalizado!!");
                 }else {
                     System.out.println("404 Comando não encontrado");
